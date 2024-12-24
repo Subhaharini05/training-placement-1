@@ -1,0 +1,6 @@
+x = list(map(float, input("Enter x values separated by spaces: ").split()))
+y = list(map(float, input("Enter y values separated by spaces: ").split()))
+mean_x = sum(x) / len(x)
+mean_y = sum(y) / len(y)
+covariance = sum((x[i] - mean_x) * (y[i] - mean_y) for i in range(len(x))) / len(x)
+print("Covariance:", covariance)
